@@ -1,0 +1,14 @@
+{
+    "login": "student123",
+    "name": "Student Developer",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1",
+    "bio": "Computer Science student and web developer",
+    "location": "Ahmedabad, India",
+    "company": "College",
+    "public_repos": 12,
+    "followers": 25,
+    "following": 18,
+    "html_url": "https://github.com/student123",
+    "created_at": "2024-01-15T10:30:00Z",
+    "blog": "https://example.com"
+}

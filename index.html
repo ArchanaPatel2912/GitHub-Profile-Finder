@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub Profile Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span>◉</span>
+            GitHub Finder
+        </div>
+
+        <p>
+            Find GitHub Profiles Easily
+        </p>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- =========================
+             TITLE
+        ========================== -->
+
+        <section class="hero">
+
+            <h1>
+                GitHub Profile Finder
+            </h1>
+
+            <p>
+                Search for any GitHub username and
+                view profile information using the
+                GitHub API.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             SEARCH BOX
+        ========================== -->
+
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter GitHub username..."
+                autocomplete="off"
+            >
+
+            <button id="searchBtn">
+                🔍 Search
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             ERROR MESSAGE
+        ========================== -->
+
+        <div id="error"
+             class="error">
+        </div>
+
+
+
+        <!-- =========================
+             LOADING
+        ========================== -->
+
+        <div id="loader"
+             class="loader">
+
+            <div class="spinner"></div>
+
+            <p>
+                Fetching GitHub profile...
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             PROFILE CARD
+        ========================== -->
+
+        <section id="profile"
+                 class="profile-card">
+
+
+            <!-- Profile -->
+
+            <div class="profile-top">
+
+                <img
+                    id="avatar"
+                    src=""
+                    alt="GitHub Profile"
+                    class="avatar"
+                >
+
+
+                <div class="profile-info">
+
+                    <h2 id="name">
+                        GitHub User
+                    </h2>
+
+                    <p id="login">
+                        @username
+                    </p>
+
+                    <p id="bio">
+                        No bio available
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 DETAILS
+            ========================== -->
+
+            <div class="details">
+
+
+                <div class="detail">
+
+                    <span>📍</span>
+
+                    <div>
+
+                        <small>
+                            Location
+                        </small>
+
+                        <p id="location">
+                            Not available
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="detail">
+
+                    <span>🏢</span>
+
+                    <div>
+
+                        <small>
+                            Company
+                        </small>
+
+                        <p id="company">
+                            Not available
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="detail">
+
+                    <span>📅</span>
+
+                    <div>
+
+                        <small>
+                            Joined
+                        </small>
+
+                        <p id="joined">
+                            Not available
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="detail">
+
+                    <span>🔗</span>
+
+                    <div>
+
+                        <small>
+                            Website
+                        </small>
+
+                        <p id="website">
+                            Not available
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 STATISTICS
+            ========================== -->
+
+            <div class="stats">
+
+
+                <div class="stat">
+
+                    <span>
+                        📦
+                    </span>
+
+                    <h3 id="repos">
+                        0
+                    </h3>
+
+                    <p>
+                        Repositories
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <span>
+                        👥
+                    </span>
+
+                    <h3 id="followers">
+                        0
+                    </h3>
+
+                    <p>
+                        Followers
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <span>
+                        👤
+                    </span>
+
+                    <h3 id="following">
+                        0
+                    </h3>
+
+                    <p>
+                        Following
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- GitHub Profile -->
+
+            <a
+                id="profileLink"
+                href="#"
+                target="_blank"
+                class="profile-btn"
+            >
+                View GitHub Profile →
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             REPOSITORIES
+        ========================== -->
+
+        <section id="repositories"
+                 class="repositories">
+
+            <h2>
+                📚 Latest Repositories
+            </h2>
+
+
+            <div id="repoList"
+                 class="repo-list">
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            GitHub Profile Finder
+        </p>
+
+        <span>
+            HTML • CSS • JavaScript • Fetch API • JSON
+        </span>
+
+        <div class="creator">
+        Created by <strong>Archana Ghetiya</strong>
+        </div>
+
+         <div class="copyright">
+        © 2026 Archana Ghetiya. All Rights Reserved.
+    </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
